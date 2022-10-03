@@ -1,0 +1,25 @@
+
+body {
+  background-color: #8181ff;
+  font: normal 15px arial; 
+}
+
+header {
+color: #fff;
+text-align: center;
+}
+
+Section {
+  background-color: #fff;
+  margin: auto;
+  max-width: 500px;
+  padding: 10px;
+}
+select {
+  width: 200px;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+}

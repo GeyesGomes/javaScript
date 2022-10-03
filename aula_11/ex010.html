@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: blueviolet;
+            text-align: center;
+        }
+
+        .res01 {
+            width: 400px;
+            height: 300px;
+            border: solid;
+            margin: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 4px 4px 3px #7b16aa;
+        }
+        
+        .button{
+            background-color: red;
+            color: antiquewhite;
+            border-radius: 7px;
+            box-shadow: red 2px 2px 2px;
+            
+        }
+        .button:hover {
+            background-color: brown;
+        }
+
+        .boxtext {
+            border-radius: 7px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Qual a sua nacionalidade?</h1>
+
+    País de origem: <input class="boxtext" type="text" name="txtpais" id="txtpais">
+    <input class="button" type="button" value="VERIFICAR" onclick='nacionalidade()'>
+    
+    <div class="res01">
+        <p>Brasileiro ou Estrangeiro</p>
+    </div>
+
+    <script>
+        function nacionalidade() {
+            let txtp = document.querySelector('input#txtpais')
+            let res = window.document.querySelector('.res01')
+            let pais = txtp.value
+    
+            res.innerHTML = `<p>Seu país de origem é <strong>${pais}.</strong></p>`
+            
+            if(pais == 'Brasil' || pais == 'brasil') {
+                res.innerHTML += `Você é Brasileiro`
+            }else {
+                res.innerHTML += 'Você é estrangeiro'
+            }
+
+        }
+
+    </script>
+</body>
+</html>
